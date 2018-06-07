@@ -25,4 +25,12 @@ router.get('/api/tpl', tplController.get)
       .put('/api/tpl', tplController.update)
 
 
+// test router
+router.get('/api', async (ctx, next) => {
+      console.log('tets');
+})
+router.get('/', async (ctx, next) => {
+      console.log('tets');
+})
+
 module.exports = router;
