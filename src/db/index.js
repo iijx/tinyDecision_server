@@ -13,8 +13,6 @@ const connect = () => {
         }
         let db_address = ENV.DB_HOST + ENV.DB_NAME;
         let a = mongoose.connect(db_address);
-        console.log(db_address)
-        // a.then( res => { console.log( 'a', res.connections[0] === mongoose.connection )}).catch(err => console.log('a',err));
         let connection = mongoose.connection;
         connection.on('disconnected', () => {
             if (curConnectTimes < maxConnectTimes) {
@@ -27,12 +25,10 @@ const connect = () => {
         })
 
         connection.on('error', (err) => {
-            console.log(err);
             reject('connect error');
         })
     
         connection.once('open', () => {
-            console.log('MongoDB Connected successfully');
             resolve(true);
         })
     })

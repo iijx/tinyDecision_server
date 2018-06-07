@@ -31,9 +31,7 @@ module.exports = {
             tplResult.sort((a, b) => {
                 return a.meta.updated.getTime() <= b.meta.updated.getTime() ? 1 : -1;
             })
-            console.log(tplResult);
             tplResult = tplResult.map(formatTpl_back2front);
-            console.log(tplResult);
         }
         ctx.body = {
             success: true,
