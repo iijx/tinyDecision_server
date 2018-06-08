@@ -10,27 +10,19 @@ const tplController = require('../controller/tplController');
 
 const router = new Router();
 
+const prefix = '/tinydec/api';
 
-router.post('/api/login', userController.login);
+router.post(`${prefix}/login`, userController.login);
 
-router.get('/api/question', questionController.get)
-      .post('/api/question', questionController.create)
-      .post('/api/questions_init', questionController.init)
-      .put('/api/question', questionController.update)
-
-
-// router.post('/api/formId', formId.add)
-router.get('/api/tpl', tplController.get)
-      .post('/api/tpl', tplController.create)
-      .put('/api/tpl', tplController.update)
+router.get(`${prefix}/question`, questionController.get)
+      .post(`${prefix}/question`, questionController.create)
+      .post(`${prefix}/questions_init`, questionController.init)
+      .put(`${prefix}/question`, questionController.update)
 
 
-// test router
-router.get('/api', async (ctx, next) => {
-      console.log('tets');
-})
-router.get('/', async (ctx, next) => {
-      console.log('tets');
-})
+
+router.get(`${prefix}/tpl`, tplController.get)
+      .post(`${prefix}/tpl`, tplController.create)
+      .put(`${prefix}/tpl`, tplController.update)
 
 module.exports = router;
