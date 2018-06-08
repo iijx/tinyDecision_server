@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = {
     login: async (ctx, next) => {
+        console.log(11);
         let { code } = ctx.request.body;
         let result = {};
         try {
