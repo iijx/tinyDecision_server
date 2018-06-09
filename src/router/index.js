@@ -19,8 +19,6 @@ router.get(`${prefix}/question`, questionController.get)
       .post(`${prefix}/questions_init`, questionController.init)
       .put(`${prefix}/question`, questionController.update)
 
-
-
 router.get(`${prefix}/tpl`, tplController.get)
       .post(`${prefix}/tpl`, tplController.create)
       .put(`${prefix}/tpl`, tplController.update)
