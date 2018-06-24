@@ -23,4 +23,13 @@ router.get(`${prefix}/tpl`, tplController.get)
       .post(`${prefix}/tpl`, tplController.create)
       .put(`${prefix}/tpl`, tplController.update)
 
+router.get(`${prefix}/isCopy`, async (ctx, next) => {
+      ctx.body = {
+            success: true,
+            result: {
+                  isCopy: true,
+                  copyText: 'HvRkKA67st'
+            }
+      }
+})
 module.exports = router;
