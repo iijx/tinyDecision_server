@@ -27,7 +27,7 @@ router.get(`${prefix}/isCopy`, async (ctx, next) => {
       ctx.body = {
             success: true,
             result: {
-                  isCopy: false,
+                  isCopy: true,
                   copyText: 'HvRkKA67st'
             }
       }
