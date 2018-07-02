@@ -21,10 +21,18 @@ module.exports = {
             result: curQuestions
         }
     },
+    getAll: async (ctx, next) => {
+        let QuestionModel = mongoose.model('Question');
+        let result = await QuestionModel.find();
+        ctx.body = {
+            success: true,
+            result,
+        }
+    },
     get: async (ctx, next) => {
         let query = ctx.query;
 
-        let QuestionModel = mongoose.model('Question');        
+        let QuestionModel = mongoose.model('Question');   
         let questionResult;
         if (query && query.id) {
             questionResult = await QuestionModel.find({

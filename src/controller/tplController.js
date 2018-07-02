@@ -13,6 +13,14 @@ function formatTpl_back2front(item) {
 }
 
 module.exports = {
+    getAll: async(ctx, next) => {
+        const TplModel = mongoose.model('Tpl');
+        const result = await TplModel.find();
+        ctx.body = {
+            success: true,
+            result,
+        }
+    },
     get: async (ctx, next) => {
         const TplModel = mongoose.model('Tpl');
         let query = ctx.query;

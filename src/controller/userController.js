@@ -60,5 +60,14 @@ module.exports = {
                 token,
             }
         };
+    },
+
+    get: async (ctx, next) => {
+        let UserModel = mongoose.model('User');
+        let users = await UserModel.find();
+        ctx.body = {
+            success: true,
+            result: users,
+        }
     }
 }

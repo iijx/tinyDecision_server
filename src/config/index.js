@@ -2,7 +2,8 @@ module.exports = {
     AUTH: {
         noLoginApi: [
             'login',
-            'isCopy'
+            'isCopy',
+            'register'
         ],
     },
 }
