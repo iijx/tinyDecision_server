@@ -52,7 +52,7 @@ module.exports = {
         } else;
         let token = jwt.sign({
             _uid: curUser._id,
-            exp: Math.floor(Date.now() / 1000) + (60 * 60), // 1小时
+            exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24), // 1小时
         }, process.env.JWT_SECRET)
         ctx.body = {
             success: true,
