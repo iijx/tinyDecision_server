@@ -42,13 +42,13 @@ const adminController = {
         });
         const user = await curUser.save();
 
-        const token = this._genToken(user._id);
+        const token = self._genToken(user._id);
 
         ctx.body = {
             success: true,
             result: {
                 token,
-                username: user
+                username: user.username
             }
         };
         
