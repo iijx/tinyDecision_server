@@ -39,6 +39,7 @@ const initSchema = () => {
     require('./schema/question.js');
     require('./schema/tpl.js');
     require('./schema/admin.js');
+    require('./schema/file.js');
 }
 module.exports = {
     connect,

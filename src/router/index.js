@@ -7,7 +7,7 @@ const userController = require('../controller/userController');
 const questionController = require('../controller/questionController');
 const tplController = require('../controller/tplController');
 const adminController = require('../controller/adminController');
-
+const qiniuController = require('../controller/qiniuController');
 const router = new Router();
 
 const prefix = '/tinydec/api';
@@ -29,6 +29,8 @@ router.post(`${prefix}/admin_register`, adminController.create)
 router.post(`${prefix}/admin_login`, adminController.login)
 
 
+router.post(`${prefix}/file`, fileController.create)
+
 router.get(`${prefix}/users`, userController.get)
 
 router.get(`${prefix}/isCopy`, async (ctx, next) => {
@@ -40,4 +42,6 @@ router.get(`${prefix}/isCopy`, async (ctx, next) => {
             }
       }
 })
+
+router.get(`${prefix}/qiniuToken`, qiniuController.getUploadToken)
 module.exports = router;
