@@ -4,6 +4,7 @@ const ENV = process.env;
 
 mongoose.Promise = global.Promise;
 
+
 const connect = () => {
     let maxConnectTimes = ENV.DB_MAXCONNECT_TIMES;
     let curConnectTimes = 0;
@@ -40,6 +41,8 @@ const initSchema = () => {
     require('./schema/tpl.js');
     require('./schema/admin.js');
     require('./schema/file.js');
+    require('./schema/record.js');
+    require('./schema/music.js');
 }
 module.exports = {
     connect,

@@ -54,6 +54,7 @@ const adminController = {
         
     },
     login: async (ctx, next) => {
+        console.log('get request', ctx.request.body);
         let { username, password } = ctx.request.body;
         const loginResult = await self._login(username, password);
         if (loginResult.result) {

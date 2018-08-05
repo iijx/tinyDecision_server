@@ -10,6 +10,12 @@ const UserSchema = new Schema({
         required: true,
         type: String,
     },
+    nickname: {
+        type: String,
+    },
+    avatarUrl: {
+        type: String,
+    },
     meta: {
         created: {
             type: Date,

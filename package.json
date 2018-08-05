@@ -24,7 +24,9 @@
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
+    "mongodb": "^3.1.1",
     "mongoose": "^5.1.2",
-    "qiniu": "^7.2.1"
+    "qiniu": "^7.2.1",
+    "random-int": "^1.0.0"
   }
 }
