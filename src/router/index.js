@@ -49,7 +49,7 @@ router.get(`${prefix}/isCopy`, async (ctx, next) => {
             success: true,
             result: {
                   isCopy: true,
-                  copyText: 'HvRkKA67st'
+                  copyText: 'DCWvhj67ZE'
             }
       }
 })
